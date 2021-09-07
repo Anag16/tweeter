@@ -60,6 +60,14 @@ form .btn:hover {
   transform: scale(1.15);
 }
 
+#tweet-btns {
+  display: flex;
+
+}
+.counter {
+  margin-left: auto;
+  align-self: center;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
