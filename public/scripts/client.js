@@ -55,11 +55,32 @@ const  createTweetElement = function (tweetObject) {
 }
 
 
+
 const renderTweets = function(tweets) {
-
-  for (const tweet of tweets){
-    $('#tweets').append(createTweetElement(tweet));
+  for (const tweet of tweets) {
+      $('#tweets').append(String(createTweetElement(tweet)));
+  }
 }
-};
 
-renderTweets(data);
+$( ".form" ).submit(function( event ) {
+  // alert( "Handler for .submit() called." );
+  event.preventDefault();
+  let data =$(this).serialize();
+  $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: $(this).serialize()
+    }).done(function() {
+      loadTweets();
+    }).fail(function(){
+        alert("Something went wrong");
+    });
+  });
+
+
+const loadTweets = function (){
+  $.ajax({
+      url: '/tweets/',
+      method: 'GET'
+    }).done(renderTweets); //AJAX pass by default the data to the callback function. In this case, renderTweets will receive a JSON Object.
+  }
