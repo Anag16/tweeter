@@ -76,6 +76,7 @@ $( ".form" ).submit(function( event ) {
       data: $(this).serialize()
     }).done(function() {
       hideErrorMessage(); //Hide the errors.
+      $('#tweet-text').val(""); //Clear textarea
       loadTweets();
     }).fail(function(){
         alert("Something went wrong");

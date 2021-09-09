@@ -19,6 +19,7 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: sans-serif;
+  max-width: 100%;
 }
 
 .bungee_text {
@@ -26,7 +27,12 @@ body {
 }
 
 .fas {
-  color: ivory;
+  color: ivory
+}
+
+.fas:hover {
+  color: rgb(109, 255, 255);
+transform: scale(1.1);
 }
 
 main {
@@ -35,6 +41,21 @@ margin: auto;
 background-color: #f4f1ec;
 }
 
+#profile {
+  border-radius: 50%;
+  height: 25vh;
+  background-color: #ff0095;
+  
+}
+
+.main_container{
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+.container{
+  padding:25px;
+}
 
 #tweet-text {
   width:100%;
@@ -103,6 +124,10 @@ article:hover {
   align-items: center;
 }
 
+#tweets header p{
+  overflow-wrap: break-word;
+}
+
 .tweet_info img {
   width: 100px;
   height: 100px;
@@ -130,6 +155,28 @@ article footer {
 .tweet_footer_icons i:hover {
   color: #ff0095;
 }
+
+
+ /* Laptops / Desktops: minimum width of 1024px */
+ @media only screen and (min-width: 1024px) {
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+
+  #header_wrapper{
+    min-width: 35%;
+    max-height: 100%;
+    margin: auto;
+  }
+  .main_container{
+    flex-direction: row;
+    max-height: 100vh;
+  }
+  .container{
+    max-width: 60%;
+    max-height: 100%;
+    overflow-y: scroll;
+  }
+}
+
 
 
 

@@ -31,61 +31,46 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span id="nav_logo" class="bungee_text">tweeter</span>
+      <span id="nav_logo" class="bungee_text"><i class="fas fa-dove"></i> tweeter</i></span>
       <div id="nav-tweet-button" class= nav_right>
         <a id="nav_new_tweet" href="#"><span class="bungee_text">Write</span> a new tweet</a>
         <i class="fas fa-angle-double-down"></i>
+     
       </div>
     </nav>
-    
-    <header id="main_header">
-      <div>
-          <img src="/images/profile-hex.png"> 
+
+    <div class="main_container">
+      <div id="header_wrapper">
+        <header id="main_header">
+          <div>
+              <img id="profile" src="/images/profile.png"> 
+          </div>
+          <br>
+          <div>
+              <h2>Ana Gabriela Ruiz</h2>
+          </div>
+        </header>
       </div>
-      <br>
-      <div>
-          <h2>Ana Gabriela Ruiz</h2>
-      </div>
-  </header>
   
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form class="form" action="/tweets/" method="POST">
+            <textarea name="text" id="tweet-text" placeholder= "What are you humming about?"></textarea>
+            <p id="tweet-errors">Your errors go here</p>
+            <div id= "tweet-btns">
+              <button id= "tweet_submit" type="submit" class="btn bungee_text">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
 
+        <section id= "tweets">
 
-<section class="new-tweet">
-  <h2>Compose Tweet</h2>
-  <form class="form" action="/tweets/" method="POST">
-    <textarea name="text" id="tweet-text" placeholder= "What are you humming about?"></textarea>
-    <p id="tweet-errors">Your errors go here</p>
-    <div id= "tweet-btns">
-      <button id= "tweet_submit" type="submit" class="btn bungee_text">Tweet</button>
-      <output name="counter" class="counter" for="tweet-text">140</output>
+        </section>
+
+      </main>
     </div>
-  </form>
-</section>
-
-<section id= "tweets">
-  <!-- <article>
-    <header>
-      <div class="tweet_info">
-        <img src="/images/avatar.jpg">
-        <h3>Puky</h3>
-        <p class="username">@Puky</p>
-      </div>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-    </header>
-    <footer class ="tweeter_footer">
-      <p class = "tweet_time"> 15 days ago</p>
-      <div class = "tweet_footer_icons">
-        <i class="fas fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="fas fa-heart"></i>
-      </div>
-    </footer>
-  </article> -->
-</section>
-
-    </main>
-
   </body>
 </html>
