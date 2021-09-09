@@ -69,6 +69,13 @@ form .btn:hover {
   align-self: center;
 }
 
+#tweet-errors{
+  color: red;
+  font-size: 0.8em;
+  display: none;
+}
+
+
 /* ///////////// TWEETS ///////////// */
 
 #tweets {
