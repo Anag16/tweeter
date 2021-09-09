@@ -4,34 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
-  // Fake data taken from initial-tweets.json
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-  
-
 const  createTweetElement = function (tweetObject) {
   let tweet1 =  `<article>
  <header>
@@ -58,7 +30,8 @@ const  createTweetElement = function (tweetObject) {
 
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
-      $('#tweets').append(String(createTweetElement(tweet)));
+    //https://api.jquery.com/prepend/
+      $('#tweets').prepend(String(createTweetElement(tweet)));
   }
 }
 
@@ -69,14 +42,13 @@ $( ".form" ).submit(function( event ) {
   if ($('#tweet-text').val().length > 140){
       let errorMessage = 'Oops, your tweet exceeds the maximum length.';
       alert(errorMessage);
-      return
+      return;
   }
   if ($('#tweet-text').val().length <= 0){
       let errorMessage = 'Your tweet is empty.';
       alert(errorMessage);
-      return
+      return;
   }
-  let data =$(this).serialize();
   $.ajax({
       method: "POST",
       url: "/tweets",
