@@ -60,6 +60,10 @@ form .btn:hover {
   transform: scale(1.15);
 }
 
+.new-tweet{
+  display:none;
+}
+
 #tweet-btns {
   display: flex;
 

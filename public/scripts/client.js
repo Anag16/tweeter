@@ -82,6 +82,16 @@ $( ".form" ).submit(function( event ) {
     });
   });
 
+  $("#nav-tweet-button").click(function(){
+    console.log("Clicked");
+    if($(".new-tweet").css('display') == 'none'){
+        $(".new-tweet").slideDown();
+    }
+    else{
+        $(".new-tweet").slideUp();
+    }
+  });
+
 
 const loadTweets = function (){
   $.ajax({
