@@ -62,9 +62,20 @@ const renderTweets = function(tweets) {
   }
 }
 
+
 $( ".form" ).submit(function( event ) {
   // alert( "Handler for .submit() called." );
   event.preventDefault();
+  if ($('#tweet-text').val().length > 140){
+      let errorMessage = 'Oops, your tweet exceeds the maximum length.';
+      alert(errorMessage);
+      return
+  }
+  if ($('#tweet-text').val().length <= 0){
+      let errorMessage = 'Your tweet is empty.';
+      alert(errorMessage);
+      return
+  }
   let data =$(this).serialize();
   $.ajax({
       method: "POST",
