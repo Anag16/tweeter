@@ -26,15 +26,6 @@ body {
   font-family: Bungee, sans-serif;
 }
 
-.fas {
-  color: ivory
-}
-
-.fas:hover {
-  color: rgb(109, 255, 255);
-transform: scale(1.1);
-}
-
 main {
 width: 90%;
 margin: auto; 
