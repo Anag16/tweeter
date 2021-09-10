@@ -11,6 +11,16 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+
+## Screenshots
+
+- Home Page and Writing your first Tweet 
+!["Screenshot of register page"](https://raw.githubusercontent.com/Anag16/tweeter/master/docs/Writing%20_tweets.gif)
+
+- Resposive Design 
+!["Screenshot of login page"](https://raw.githubusercontent.com/Anag16/tweeter/master/docs/mobile.gif)
+
+
 ## Dependencies
 
 - Express
